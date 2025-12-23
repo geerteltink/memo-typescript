@@ -1,4 +1,4 @@
-FROM node:18-alpine As development
+FROM node:18.20.8-alpine As development
 
 WORKDIR /usr/src/app
 
@@ -15,7 +15,7 @@ COPY . .
 # The dev dependencies are always needed to build, even production
 RUN npm run build
 
-FROM node:18-alpine as production
+FROM node:18.20.8-alpine as production
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}

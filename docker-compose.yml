@@ -33,7 +33,7 @@ services:
 
   rabbitmq:
     container_name: memo-rabbitmq
-    image: rabbitmq:3.11-management-alpine
+    image: rabbitmq:3.13-management-alpine
     env_file:
       - .env
     ports:
